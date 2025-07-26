@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,13 +73,24 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="service.php" class="dropdown-item">Service</a>
-                            <a href="donate.php" class="dropdown-item">Donate</a>
+                            <a href="volunteer.php" class="dropdown-item" id="navVolunteer">Volunteer</a>
+                            <a href="donate.php" class="dropdown-item" id="navDonate">Donate</a>
                             <a href="team.php" class="dropdown-item">Our Team</a>
                             <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                             <a href="404.php" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <a href="contact.php" class="nav-item nav-link">Contact</a>
+                    <li class="nav-item">
+                        <?php if (isset($_SESSION['admin_id'])): ?>
+                            <a href="admin/dashboard.php" class="nav-link" title="Admin Dashboard">
+                                <i class="fas fa-user-shield"></i>
+                            </a>
+                        <?php else: ?>
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#adminLoginModal" title="Admin Login">
+                                <i class="fas fa-user-shield"></i>
+                            </a>
+                        <?php endif; ?>
+                    </li>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn btn-outline-primary py-2 px-3" href="donate.php">
@@ -90,3 +104,92 @@
         </nav>
     </div>
     <!-- Navbar End --> 
+
+<!-- Admin Login Modal -->
+<div class="modal fade" id="adminLoginModal" tabindex="-1" aria-labelledby="adminLoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="adminLoginModalLabel"><i class="fas fa-user-shield me-2"></i>Admin Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="adminLoginForm" method="post" action="admin/verify_login.php">
+          <div class="mb-3">
+            <label for="admin-username" class="form-label">Username or Email</label>
+            <input type="text" class="form-control" id="admin-username" name="username" required>
+          </div>
+          <div class="mb-3">
+            <label for="admin-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="admin-password" name="password" required>
+          </div>
+          <div id="adminLoginError" class="alert alert-danger d-none"></div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Admin Login Modal --> 
+
+<!-- AJAX scripts for forms will be added here --> 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Admin Login Form
+    const adminLoginForm = document.getElementById('adminLoginForm');
+    if (adminLoginForm) {
+        adminLoginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(adminLoginForm);
+            fetch('admin/verify_login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = data.redirect;
+                } else {
+                    document.getElementById('admin-password').value = '';
+                    document.getElementById('adminLoginError').classList.remove('d-none');
+                    document.getElementById('adminLoginError').textContent = data.message;
+                }
+            })
+            .catch(() => {
+                document.getElementById('adminLoginError').classList.remove('d-none');
+                document.getElementById('adminLoginError').textContent = 'An error occurred. Please try again.';
+            });
+        });
+    }
+
+    // Volunteer and Donate link validation (basic check)
+    document.getElementById('navVolunteer').addEventListener('click', function(e) {
+        fetch('volunteer.php', { method: 'HEAD' })
+            .then(res => {
+                if (!res.ok) {
+                    e.preventDefault();
+                    alert('Volunteer page not found.');
+                }
+            })
+            .catch(() => {
+                e.preventDefault();
+                alert('Volunteer page not found.');
+            });
+    });
+    document.getElementById('navDonate').addEventListener('click', function(e) {
+        fetch('donate.php', { method: 'HEAD' })
+            .then(res => {
+                if (!res.ok) {
+                    e.preventDefault();
+                    alert('Donate page not found.');
+                }
+            })
+            .catch(() => {
+                e.preventDefault();
+                alert('Donate page not found.');
+            });
+    });
+});
+</script> 

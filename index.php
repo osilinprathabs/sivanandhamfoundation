@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+ 
+<?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include 'header.php'; ?>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">

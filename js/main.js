@@ -78,6 +78,53 @@
         }
     });
 
+        // Form submission
+        const donationForm = document.getElementById('donationForm');
+        const errorMessage = document.getElementById('errorMessage');
+        const successMessage = document.getElementById('successMessage');
+        const amountInput = document.getElementById('donation_amount');
+    
+        if (donationForm && errorMessage && successMessage && amountInput) {
+            donationForm.addEventListener('submit', async (e) => {
+                // Remove e.preventDefault() to allow form submission to the server
+                // e.preventDefault();
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'none';
+    
+                const name = document.getElementById('donor_name').value;
+                const email = document.getElementById('donor_email').value;
+                const amount = parseFloat(amountInput.value);
+    
+                // Validate inputs
+                if (!name || !email || !amount) {
+                    errorMessage.textContent = 'Please fill in all fields.';
+                    errorMessage.style.display = 'block';
+                    e.preventDefault(); // Prevent submission only if validation fails
+                    return;
+                }
+                if (amount < 100) {
+                    errorMessage.textContent = 'Donation amount must be at least INR 100.';
+                    errorMessage.style.display = 'block';
+                    e.preventDefault(); // Prevent submission only if validation fails
+                    return;
+                }
+    
+                // Temporarily disable Stripe integration
+                errorMessage.textContent = 'Donation feature is disabled for now.';
+                errorMessage.style.display = 'block';
+                e.preventDefault(); // Prevent submission until Stripe is enabled
+                return;
+            });
+        }
+    
+        // Donation
+        $('.progress').waypoint(function () {
+            $('.progress-bar').each(function () {
+                $(this).css("width", $(this).attr("aria-valuenow") + '%');
+            });
+        }, {offset: '80%'});
+        
+
     
 })(jQuery);
 
