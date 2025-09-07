@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $password = '';
-$dbname = 'sivanandham_foundation';
+$dbname = 'Sivanandham_foundation';
 
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);

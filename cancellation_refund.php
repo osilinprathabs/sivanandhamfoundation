@@ -21,7 +21,7 @@
                 <div class="card-body p-4">
                     <h2 class="mb-4">Cancellation & Refund Policy</h2>
                     <h4>1. Cancellation Policy</h4>
-                    <p>Donations made to Sivanandham Foundation are generally non-cancellable. If you believe a donation was made in error, please contact us immediately at <a href="mailto:info@sivanandhamfoundation.com">info@sivanandhamfoundation.com</a>.</p>
+                    <p>Donations made to Shivanantham Foundation are generally non-cancellable. If you believe a donation was made in error, please contact us immediately at <a href="mailto:info@Shivananthamfoundation.com">info@Shivananthamfoundation.com</a>.</p>
                     <h4>2. Refund Policy</h4>
                     <ul>
                         <li>Refunds are considered only for duplicate or mistaken transactions.</li>
@@ -29,7 +29,7 @@
                         <li>Approved refunds will be processed to the original payment method within 7-10 business days.</li>
                     </ul>
                     <h4>3. Contact</h4>
-                    <p>For any questions regarding this policy, please email <a href="mailto:info@sivanandhamfoundation.com">info@sivanandhamfoundation.com</a>.</p>
+                    <p>For any questions regarding this policy, please email <a href="mailto:info@Shivananthamfoundation.com">info@Shivananthamfoundation.com</a>.</p>
                 </div>
             </div>
         </div>

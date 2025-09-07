@@ -21,17 +21,17 @@
                 <div class="card-body p-4">
                     <h2 class="mb-4">Shipping, Return & Refund Policy</h2>
                     <h4>1. Shipping Policy</h4>
-                    <p>Sivanandham Foundation does not ship any physical goods. All donations are processed digitally and no products will be delivered.</p>
+                    <p>Shivanantham Foundation does not ship any physical goods. All donations are processed digitally and no products will be delivered.</p>
                     <h4>2. Return Policy</h4>
                     <p>As we do not sell physical goods, there are no returns. If you believe a donation was made in error, please contact us immediately.</p>
                     <h4>3. Refund Policy</h4>
                     <ul>
                         <li>Refunds are considered only for duplicate or mistaken transactions.</li>
-                        <li>To request a refund, contact us at <a href="mailto:info@sivanandhamfoundation.com">info@sivanandhamfoundation.com</a> within 7 days of the transaction.</li>
+                        <li>To request a refund, contact us at <a href="mailto:info@Shivananthamfoundation.com">info@Shivananthamfoundation.com</a> within 7 days of the transaction.</li>
                         <li>Approved refunds will be processed to the original payment method within 7-10 business days.</li>
                     </ul>
                     <h4>4. Contact</h4>
-                    <p>For any questions regarding this policy, please email <a href="mailto:info@sivanandhamfoundation.com">info@sivanandhamfoundation.com</a>.</p>
+                    <p>For any questions regarding this policy, please email <a href="mailto:info@Shivananthamfoundation.com">info@Shivananthamfoundation.com</a>.</p>
                 </div>
             </div>
         </div>

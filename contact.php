@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include 'db.php'; // Use db.php for connection
+include 'db.php'; // Database connection
 
 $success_message = $error_message = '';
 
@@ -51,25 +51,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                <h4 class="mb-3">Contact Us</h4>
-                <?php if ($success_message): ?>
-                    <div class="alert alert-success"><?php echo $success_message; ?></div>
-                <?php endif; ?>
-                <?php if ($error_message): ?>
-                    <div class="alert alert-danger"><?php echo $error_message; ?></div>
-                <?php endif; ?>
-                <form method="POST">
-                    <div class="row g-3 text-start">
-                        <div class="col-12 mb-2"><input type="text" class="form-control" name="name" placeholder="Full Name" required></div>
-                        <div class="col-12 mb-2"><input type="email" class="form-control" name="email" placeholder="Email" required></div>
-                        <div class="col-12 mb-2"><input type="text" class="form-control" name="phone_number" placeholder="Phone" required></div>
-                        <div class="col-12 mb-2"><input type="text" class="form-control" name="subject" placeholder="Subject" required></div>
-                        <div class="col-12 mb-2"><textarea class="form-control" name="message" placeholder="Message" rows="4" required></textarea></div>
-                        <div class="col-12 d-grid"><button type="submit" class="btn btn-primary">Send Message</button></div>
+        <div class="col-lg-10">
+            <div class="row g-4">
+                <!-- Left: Form -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-gradient-primary text-white text-center p-4">
+                            <h4 class="mb-0">Get in Touch</h4>
+                            <p class="text-white-50 mt-2 mb-0">We'd love to hear from you! Fill out the form below to reach us.</p>
+                        </div>
+                        <div class="card-body p-4">
+                            <form method="POST" id="contactForm" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12 form-floating">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" value="<?php echo htmlspecialchars($_POST['name'] ?? '', ENT_QUOTES); ?>" required>
+                                        <label for="name">Full Name</label>
+                                    </div>
+                                    <div class="col-12 form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo htmlspecialchars($_POST['email'] ?? '', ENT_QUOTES); ?>" required>
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="col-12 form-floating">
+                                        <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Phone" value="<?php echo htmlspecialchars($_POST['phone_number'] ?? '', ENT_QUOTES); ?>" required>
+                                        <label for="phone_number">Phone Number</label>
+                                    </div>
+                                    <div class="col-12 form-floating">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" value="<?php echo htmlspecialchars($_POST['subject'] ?? '', ENT_QUOTES); ?>">
+                                        <label for="subject">Subject (Optional)</label>
+                                    </div>
+                                    <div class="col-12 form-floating">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5" required><?php echo htmlspecialchars($_POST['message'] ?? '', ENT_QUOTES); ?></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                    <div class="col-12 d-grid">
+                                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </form>
+                </div>
+
+                <!-- Right: Google Map -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-gradient-primary text-white text-center p-4">
+                            <h4 class="mb-0">Our Location</h4>
+                            <p class="text-white-50 mt-2 mb-0">Visit us at our temple</p>
+                        </div>
+                        <div class="card-body p-0 map-container" style="height: 400px;">
+                            <iframe
+                                src="https://maps.google.com/maps?q=SHRI%20AADHI%20VARAHI%20AMMAN%20PARIGARA%20TEMPLE,%20101,%20Shanmuga%20Nagar,%20Uyyakondan%20Thirumalai,%20Sholanganallur,%20Tamil%20Nadu%20620102&output=embed"
+                                style="width: 100%; height: 100%; border: 0; border-radius: 0 0 0.75rem 0.75rem;"
+                                allowfullscreen=""
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Google Map -->
             </div>
         </div>
     </div>
@@ -77,10 +117,118 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <?php include 'footer.php'; ?>
 
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+<!-- Client-Side Validation and SweetAlert2 -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        const phoneInput = document.querySelector('input[name="phone_number"]');
+        const phonePattern = /^[0-9]{10,15}$/;
+
+        if (!phonePattern.test(phoneInput.value)) {
+            event.preventDefault();
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Phone Number',
+                text: 'Phone number must be 10-15 digits.',
+                confirmButtonText: 'OK'
+            });
+            phoneInput.focus();
+            return;
+        }
+    });
+
+    <?php if ($error_message): ?>
+        Swal.fire({
+            icon: 'error',
+            title: 'Submission Error',
+            text: '<?php echo htmlspecialchars($error_message); ?>',
+            confirmButtonText: 'OK'
+        });
+    <?php endif; ?>
+
+    <?php if ($success_message): ?>
+        Swal.fire({
+            icon: 'success',
+            title: '<?php echo htmlspecialchars($success_message); ?>',
+            showConfirmButton: true,
+            timer: 8000,
+            timerProgressBar: true
+        }).then(() => {
+            window.location.href = 'contact.php';
+        });
+        // Trigger confetti
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    <?php endif; ?>
+</script>
+
 <style>
-    .service-item {
-        border-top: 5px solid #007bff;
-        border-radius: 0.5rem 0.5rem 0 0;
-        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+    .card {
+        border-radius: 0.75rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.1) !important;
+    }
+    .bg-gradient-primary {
+        background: linear-gradient(45deg, #0057b8, #00c4ff);
+    }
+    .form-floating > .form-control,
+    .form-floating > .form-control:focus {
+        border: none;
+        border-bottom: 2px solid #dee2e6;
+        border-radius: 0;
+        padding-top: 1.5rem;
+        height: calc(3.5rem + 2px);
+    }
+    .form-floating > textarea.form-control {
+        height: auto;
+    }
+    .form-floating > label {
+        color: #6c757d;
+        padding-left: 0.75rem;
+        transition: all 0.2s ease;
+    }
+    .form-floating > .form-control:focus ~ label,
+    .form-floating > .form-control:not(:placeholder-shown) ~ label {
+        transform: translateY(-1.5rem) scale(0.85);
+        color: #007bff;
+    }
+    .form-floating > .form-control:focus {
+        border-bottom-color: #007bff;
+        box-shadow: none;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+        background-color: #0057b8;
+        border-color: #0057b8;
+    }
+    .alert {
+        animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
 </style>

@@ -21,7 +21,7 @@
                 <div class="card-body p-4">
                     <h2 class="mb-4">Privacy Policy</h2>
                     <h4>1. Introduction</h4>
-                    <p>Sivanandham Foundation is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information.</p>
+                    <p>Shivanantham Foundation is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information.</p>
                     <h4>2. Information We Collect</h4>
                     <ul>
                         <li>Personal information (name, email, phone, etc.) provided via forms.</li>
@@ -42,7 +42,7 @@
                     <h4>6. Changes to Policy</h4>
                     <p>We may update this policy. Please review it periodically for changes.</p>
                     <h4>7. Contact</h4>
-                    <p>For privacy questions, email <a href="mailto:info@sivanandhamfoundation.com">info@sivanandhamfoundation.com</a>.</p>
+                    <p>For privacy questions, email <a href="mailto:info@Shivananthamfoundation.com">info@Shivananthamfoundation.com</a>.</p>
                 </div>
             </div>
         </div>

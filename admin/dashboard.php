@@ -74,7 +74,7 @@ $current_tab = isset($_GET['tab']) ? $_GET['tab'] : 'volunteers';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Sivanandham Foundation</title>
+    <title>Admin Dashboard - Shivanantham Foundation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
@@ -374,7 +374,7 @@ $current_tab = isset($_GET['tab']) ? $_GET['tab'] : 'volunteers';
             <!-- Sidebar -->
             <div class="col-md-3 col-lg-2 sidebar">
                 <div class="text-center mb-4">
-                    <img src="../img/log.png" alt="Sivanandham Foundation" class="img-fluid mb-3" style="max-width: 100px;">
+                    <img src="../img/log.png" alt="Shivanantham Foundation" class="img-fluid mb-3" style="max-width: 100px;">
                     <h3 class="text-white">Admin Panel</h3>
                 </div>
                 <nav>
