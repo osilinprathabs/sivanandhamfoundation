@@ -12,7 +12,8 @@ session_start();
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+     <link href="img/weblogo.png" rel="icon" type="image/x-icon"> <!-- Updated favicon link -->
+    <link href="img/weblogo.png" rel="apple-touch-icon" sizes="180x180"> <!-- Optional for mobile devices -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +46,7 @@ session_start();
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, tower, Singapore</small>
+                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, Yercadu Salem</small>
                 <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@Shivananthamfoundation.com</small>
             </div>
             <div class="col-lg-6 px-5 text-end">

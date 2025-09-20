@@ -3,7 +3,7 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-5 col-md-6">
-                    <h1 class="fw-bold text-primary mb-4">Shivanantham<span class="text-white">Foundation</span></h1>
+                    <h1 class="fw-bold text-primary mb-4">Shivanantham<span class="text-whitefoundation">Foundation</span></h1>
                     <p>We are dedicated to helping those in need and making a positive impact in our community and beyond.</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -14,8 +14,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Address</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, tower, Singapore</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+22 75656563</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, Yercadu, India</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 9876543210</p>
                     <p><i class="fa fa-envelope me-3"></i>info@Shivananthamfoundation.com</p>
                     <h5 class="text-light mb-4">Newsletter</h5>
                     <p>Subscribe to our newsletter for updates and opportunities to help.</p>

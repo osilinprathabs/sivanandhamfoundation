@@ -77,7 +77,7 @@ include 'header.php'; ?>
                         <h1 class="display-6 mb-5">Transforming Lives Through Collective Action</h1>
                         <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
                             <p class="text-dark mb-2">Our foundation is committed to fostering hope and opportunity in underserved communities worldwide.</p>
-                            <span class="text-primary">Jane Smith, Founder</span>
+                            <span class="text-primary">Amaratham, Founder & President</span>
                         </div>
                         <p class="mb-5">Since our inception, we have worked tirelessly to provide education, healthcare, and sustainable solutions to those in need. Our mission is to empower individuals and communities to thrive through collaboration and compassion.</p>
                         <a class="btn btn-primary py-2 px-3 me-3" href="about.php">
@@ -303,26 +303,11 @@ include 'header.php'; ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                                 <h5>Amaratham</h5>
-                            <p class="text-primary">President</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>SivaSubaramani</h5>
@@ -335,6 +320,23 @@ include 'header.php'; ?>
                         </div>
                     </div>
                 </div>
+                  <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Amutha</h5>
+                            <p class="text-primary"></p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
@@ -357,7 +359,7 @@ include 'header.php'; ?>
                             <img class="img-fluid" src="img/team-5.jpg" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Amutham</h5>
+                            <h5>Nallarasi</h5>
                             <p class="text-primary"></p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -367,6 +369,40 @@ include 'header.php'; ?>
                         </div>
                     </div>
                 </div>
+
+                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-6.jpg" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                                 <h5>New name</h5>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-7.jpg" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                                 <h5>New name</h5>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
